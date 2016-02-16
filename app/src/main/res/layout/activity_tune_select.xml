@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <include android:id="@+id/guitartuner_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        layout="@layout/toolbar"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/guitartuner_toolbar"
+        android:id="@+id/tune_select_list">
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_new_tune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_add_white_48dp"
+        app:layout_anchor="@id/tune_select_list"
+        android:layout_alignBottom="@+id/tune_select_list"
+        android:layout_alignRight="@+id/tune_select_list"
+        android:layout_alignEnd="@+id/tune_select_list" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/go_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_undo_white_48dp"
+        app:layout_anchor="@id/tune_select_list"
+        android:layout_alignTop="@+id/add_new_tune"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
